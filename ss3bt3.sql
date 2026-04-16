@@ -19,6 +19,17 @@ VALUES
 (N'Tran Cong D','tcd@gmail.com','Kon Tum','2024-12-22','Locked'),
 (N'Hoàng Van E','hve@gmail.com','TP HCM','2025-03-02','Active');
 
+-- Phan tich:
+-- Input: bang CUSTOMERS
+-- Output: lay FullName,Email cua khach hang thoa dieu kien
+-- Khong dung SELECT * vi du du lieu, ton tai nguyen, giam hieu nang
+
+-- Logic loc:
+-- 1. Chi lay khach o Ha Noi
+-- 2. Ngay mua cuoi <= 2025-10-01 (tuc la lau roi chua mua)
+-- 3. Email khac NULL de con gui mail
+-- 4. Trang thai phai la Active (loai bi khoa)
+
 SELECT FullName,Email
 FROM CUSTOMERS
 WHERE City='Hà Nội'
